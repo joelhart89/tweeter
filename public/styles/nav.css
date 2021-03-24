@@ -9,7 +9,6 @@ nav {
   padding: 1.5em;
 }
 
-
 nav > span {
   font-family: "Bungee", sans-serif;
   font-size: 2em;
@@ -17,7 +16,7 @@ nav > span {
 
 .tweet {
   display: flex;
-  margin: top 100px; ;
+  margin-top: 30px;
   flex-direction: column;
   justify-content: center;
   align-content: center;

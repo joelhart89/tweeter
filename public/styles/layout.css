@@ -28,27 +28,23 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 90%;
   background-color: #f4f1ec;
-  font-family: 'Source Sans Pro', sans-serif;
-  border: 2px solid #545149;
-} 
+  margin-left: 5%;
+  margin-right: 5%;
+}
 
-.boxed {
- border: 2px solid #545149;
- }
-
-.new-tweet-bottom {
+.new-tweet-bottom > button {
   display: flex;
-  margin: top 100px; ;
-  flex-direction: row;
+  flex-direction: column;
+  align-items:left;
   justify-content: space-between;
-  padding-right: 20px;
- }
+  background-color: blue;
+  width: 80px;
+}
 
- .tweet-container{
-   width: 90%;
- }
+
+
 
  
