@@ -15,7 +15,9 @@ html {
  */
 
 body {
+  display: flex;
   color: #545149;
+  flex-direction: column;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif
@@ -43,8 +45,19 @@ body {
   background-color: blue;
   width: 80px;
 }
+/* media queries */
 
-
-
-
+@media (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
  
+  .container {
+    flex-direction: column;
+    width: 45%;
+    flex-flow: wrap;
+    margin: 200px 0px;
+  }
+}

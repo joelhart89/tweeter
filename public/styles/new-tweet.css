@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: center;
   border: 2px solid red;
+  font-style: unset;
+  font-size: 32px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 700;
@@ -20,14 +22,19 @@
   padding-right: 5%;
   }
 
-.new-tweet-top{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#tweet-text{
   border:0px;
   border-bottom: 2px solid #5f5c53;
   font-weight: 600;
   background: transparent;
+}
+
+.new-tweet-top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1rem;
+ 
 }
 
 .new-tweet-bottom {

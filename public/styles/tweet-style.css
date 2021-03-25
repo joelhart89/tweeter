@@ -19,6 +19,8 @@ article.tweet > header {
 
 #tweet-container{
   width: 90%;
+   flex-direction: column;
+  margin-top: 10px;
 }
 
 article.tweet > header > h4 {
