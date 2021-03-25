@@ -17,7 +17,7 @@ article.tweet > header {
   height: 2em;
 }
 
-.tweet-container{
+#tweet-container{
   width: 90%;
 }
 
@@ -74,7 +74,11 @@ article.tweet:hover {
   text-shadow: 0.3px 0.3px #5f5c53;
 }
 
-article.tweet:hover > header > h4 {
+article.tweet > header > h4 {
   display: none;
   text-shadow: 0.3px 0.3px #b4b4b4;
+} 
+
+article.tweet:hover > header > h4 {
+  display: block;
 } 

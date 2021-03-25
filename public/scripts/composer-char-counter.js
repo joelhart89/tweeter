@@ -4,11 +4,8 @@ $(document).ready(function() {
     const $counter = $form.find(".counter");
     const input = $(this).val().length;
     const charactersRemaining = 140 - input;
-    console.log('charactersRemaiing',charactersRemaining);
-    console.log(charactersRemaining)
 
     $counter.text(charactersRemaining);
-    console.log('test',$counter.text(charactersRemaining));
     if (charactersRemaining < 0) {
       $counter.addClass('red-text');
     } else {

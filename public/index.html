@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/tweet-style.css" type="text/css" />
 
     <!-- External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
@@ -28,7 +29,8 @@
 
     <!--Font Awesome-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"data-auto-a11y="true"></script>
-    
+
+    <!--AjaxJquery Function for tweets to be posted(below is the example to work of? or do we have it in the client.js)-->
   </head>
 
   <body>
@@ -53,6 +55,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class= "errors"> </div>
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <div class="new-tweet-top">
@@ -65,42 +68,8 @@
         </form>
     </section>
     
-    <section class="tweet-container">
-      <article class="tweet">
-        <header>
-          <div class="user">
-            <p>JTweets</p>
-          </div>
-          <h4>@Jtweeters</h4>
-        </header>
-        <p>David Dobrik is Cancelled!</p>
-        <footer>
-          <span>55 minutes ago</span>
-          <div class="littleicon">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
-
-      <article class="tweet">
-        <header>
-          <div class="user">
-            <p>JTweets</p>
-          </div>
-          <h4>@Jtweeters</h4>
-        </header>
-        <p>David Dobrik is Cancelled!</p>
-        <footer>
-          <span>55 minutes ago</span>
-          <div class="littleicon">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+    <section id="tweet-container">
+      
       
     </section> 
 

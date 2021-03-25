@@ -1,3 +1,12 @@
+.errors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid red;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
 
 .new-tweet {
   display: flex;
