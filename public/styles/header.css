@@ -6,7 +6,8 @@ body > header {
   height: 400px;
   margin-top: 110px;
   background-color: #a5d5fa;
-  background-image: url("https://www.transparenttextures.com/patterns/graphcoders-lil-fiber.png");
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+
 }
 
 header > div > h2 {
@@ -18,7 +19,6 @@ header > div > h2 {
    body > header {
     flex-direction: column;
     width: 33%;
-    margin: 220px 5rem;
+    margin: 145px 5.5rem;
   }
-
 }

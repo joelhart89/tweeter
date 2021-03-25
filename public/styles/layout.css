@@ -42,7 +42,9 @@ body {
   flex-direction: column;
   align-items:left;
   justify-content: space-between;
-  background-color: blue;
+  background-color:#4056a1;
+  margin-top: 4px;
+  color:seashell;
   width: 80px;
 }
 /* media queries */
@@ -56,8 +58,8 @@ body {
  
   .container {
     flex-direction: column;
-    width: 45%;
+    width: 55%;
     flex-flow: wrap;
-    margin: 200px 0px;
+    margin: 100px 0px;
   }
 }

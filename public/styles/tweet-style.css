@@ -19,7 +19,7 @@ article.tweet > header {
 
 #tweet-container{
   width: 90%;
-   flex-direction: column;
+  flex-direction: column;
   margin-top: 10px;
 }
 
@@ -57,7 +57,7 @@ article.tweet > p {
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  color:blue;
+  color:#4056a1;
   width: 10%;
 }
 
@@ -72,7 +72,7 @@ article.tweet > footer {
 }
 
 article.tweet:hover {
-  box-shadow: 5px 5px #99a9e0;
+  box-shadow: 5px 5px #a5d5fa;
   text-shadow: 0.3px 0.3px #5f5c53;
 }
 

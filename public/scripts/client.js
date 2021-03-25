@@ -40,8 +40,7 @@ return newHtml;
 
 $("form").on("submit",function (event) {
   event.preventDefault(); 
-
-  
+ 
   if ($("#tweet-text").val().length === 0) {
     $(".errors").html('Try Writing Something First!');
     return $('.errors').hide().slideDown(400)
@@ -57,6 +56,7 @@ $("form").on("submit",function (event) {
 
 //render function to show tweet to temorary data element.
 const renderTweet = function(tweets) {
+  $("#tweet-container").empty()
   for(const tweet of tweets) {
     let $temp = createTweetElement(tweet);//cTElement function will pass [tweet] p #tweets container using the .append() jquery below
     $('#tweet-container').prepend($temp);
@@ -70,6 +70,9 @@ const postTweets = function(data) {
   $.ajax('/tweets',{url: '/tweets', data: data , method: 'POST'})
     .then(() => {
       loadTweets();
+      $(".errors").slideUp()
+      $('#tweet-text').val('')
+      $('#counter').text(140)
     })
     .catch((err) => {
       console.log("There was an ERROR ", err)

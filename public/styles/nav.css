@@ -4,7 +4,8 @@ nav {
   align-items:center;
   width: 100%;
   height: 120px;
-  background-color: #4056a1;
+  background-color: #a5d5fa;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
   color: #ffffff;
   padding: 1.5em;
   position: fixed;
@@ -36,5 +37,23 @@ nav > span {
   transform: rotate(90deg);
   color:#9b0034;
   font-size: 2em;
+}
+
+@media (min-width: 1024px) {
+  nav { 
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    height: 120px;
+    background-color: #4056a1;
+    color: #ffffff;
+    padding: 1.5em;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  
+ }
+
 }
 

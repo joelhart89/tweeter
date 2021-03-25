@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   border: 2px solid red;
+  color: red;
   font-style: unset;
   font-size: 32px;
   margin-top: 20px;
@@ -12,15 +13,14 @@
 
 .new-tweet {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  width: 90%;
+  justify-content: left;
   flex-direction: column;
   background-color: #f4f1ec;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  }
+
+}
 
 #tweet-text{
   border:0px;
