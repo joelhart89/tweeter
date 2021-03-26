@@ -1,8 +1,14 @@
-# Tweeter Project
+# Tweeter - A Dynamic Java & CSS project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a single page dynamic web app that enables users to post tweets and see them on the same page. 
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This project used:
+-HTML, CSS, JS, Jquery, Ajex, NodeJS and Express. 
+
+## Final Product
+
+!["screenshot of web page"](https://github.com/joelhart89/tweeter/blob/master/docs/tweeter1.png?raw=true)
+!["screenshot of phone page"](https://github.com/joelhart89/tweeter/blob/master/docs/tweeter2.png?raw=true)
 
 ## Getting Started
 
@@ -15,3 +21,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- md5
