@@ -39,6 +39,8 @@ nav > span {
   font-size: 2em;
 }
 
+/* media Queries */
+
 @media (min-width: 1024px) {
   nav { 
     display: flex;

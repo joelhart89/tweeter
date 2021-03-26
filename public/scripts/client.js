@@ -7,13 +7,13 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 $(document).ready(function() {
-  $('.errors').hide()
+  $('.errors').hide();
  
-const createTweetElement = (data) => {
-  let newHtml = ` <article class="tweet">
+  const createTweetElement = (data) => {
+    let newHtml = ` <article class="tweet">
     <header>
       <div class="user">
         <img
@@ -32,66 +32,66 @@ const createTweetElement = (data) => {
         <i class="fas fa-heart"></i>
       </div>
     </footer>
-  </article>`
+  </article>`;
   
-return newHtml;
-};
+    return newHtml;
+  };
 
 
-$("form").on("submit",function (event) {
-  event.preventDefault(); 
+  $("form").on("submit",function(event) {
+    event.preventDefault();
  
-  if ($("#tweet-text").val().length === 0) {
-    $(".errors").html('Try Writing Something First!');
-    return $('.errors').hide().slideDown(400)
-  } else if ($("#tweet-text").val().length > 140) {
-    $(".errors").html('Try Writing Something First!');
-    return $('.errors').hide().slideDown(400)
-  } else {
-    const data = $(this).serialize();
-    console.log('data', data)
-    postTweets(data);
-  }
-})
+    if ($("#tweet-text").val().length === 0) {
+      $(".errors").html('Try Writing Something First!');
+      return $('.errors').hide().slideDown(400);
+    } else if ($("#tweet-text").val().length > 140) {
+      $(".errors").html('Try Writing Something First!');
+      return $('.errors').hide().slideDown(400);
+    } else {
+      const data = $(this).serialize();
+      console.log('data', data);
+      postTweets(data);
+    }
+  });
 
-//render function to show tweet to temorary data element.
-const renderTweet = function(tweets) {
-  $("#tweet-container").empty()
-  for(const tweet of tweets) {
-    let $temp = createTweetElement(tweet);//cTElement function will pass [tweet] p #tweets container using the .append() jquery below
-    $('#tweet-container').prepend($temp);
-  }
-};
+  //render function to show tweets
+  const renderTweet = function(tweets) {
+    $("#tweet-container").empty();
+    for (const tweet of tweets) {
+      let $temp = createTweetElement(tweet);
+      $('#tweet-container').prepend($temp);
+    }
+  };
 
 
-//function AJAX POST tweet
-const postTweets = function(data) {
-  console.log('data 2', data)
-  $.ajax('/tweets',{url: '/tweets', data: data , method: 'POST'})
-    .then(() => {
-      loadTweets();
-      $(".errors").slideUp()
-      $('#tweet-text').val('')
-      $('#counter').text(140)
-    })
-    .catch((err) => {
-      console.log("There was an ERROR ", err)
-    })         
-};
+  //function AJAX POST tweet
+  const postTweets = function(data) {
+    console.log('data 2', data);
+    $.ajax('/tweets',{url: '/tweets', data: data , method: 'POST'})
+      .then(() => {
+        loadTweets();
+        $(".errors").slideUp();
+        $('#tweet-text').val('');
+        $("#counter").output(140);
+      })
+      .catch((err) => {
+        console.log("There was an ERROR ", err);
+      });
+  };
 
-//Function AJAX GET tweet
-const loadTweets = function() {
-  $.ajax('/tweets', {url:'/tweets', method: 'GET', dataType: 'JSON' })
-  .then((posts) => {
-    // pass the data we get through renderTweet.
-    renderTweet(posts);
-  })
-  .catch((err) => {
-    console.log("There was an ERROR ", err)
-  })        
-};
-//function to update the tweet when submit event takes place. 
-loadTweets()
+  //Function AJAX GET tweet
+  const loadTweets = function() {
+    $.ajax('/tweets', {url:'/tweets', method: 'GET', dataType: 'JSON' })
+      .then((posts) => {
+        // pass the data we get through renderTweet.
+        renderTweet(posts);
+      })
+      .catch((err) => {
+        console.log("There was an ERROR ", err);
+      });
+  };
+  //function to update the tweet when submit event takes place.
+  loadTweets();
 
-}); 
+});
 
